@@ -75,6 +75,7 @@ article .featured-media {
 article .article-excerpt img,
 article .article-content img,
 article .featured-media img {
+  display: block;
   max-width: 100%;
   height: auto;
   margin: 1rem auto;
@@ -178,4 +179,8 @@ article table .table-bordered {
 }
 article table .table-striped tbody tr:nth-of-type(odd) {
   background-color: #f2f2f2;
+}
+article table pre {
+  overflow-x: auto;
+  overflow-y: hidden;
 }
