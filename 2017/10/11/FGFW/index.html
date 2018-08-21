@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
   
-  <title>如何优雅的上网 | Dy&#39;blog</title>
+  <title>如何优雅的上网 | DY&#39;BLOG</title>
 
   
-  <meta name="author" content="Dy">
+  <meta name="author" content="DY">
   
 
   
@@ -24,14 +24,14 @@
 
   <meta property="og:title" content="如何优雅的上网"/>
 
-  <meta property="og:site_name" content="Dy&#39;blog"/>
+  <meta property="og:site_name" content="DY&#39;BLOG"/>
 
   
   <meta property="og:image" content="/favicon.ico"/>
   
 
   <link href="/favicon.ico" rel="icon">
-  <link rel="alternate" href="/atom.xml" title="Dy&#39;blog" type="application/atom+xml">
+  <link rel="alternate" href="/atom.xml" title="DY&#39;BLOG" type="application/atom+xml">
   <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
 </head>
 
@@ -43,7 +43,7 @@
     <header>
   <div class="site-branding">
     <h1 class="site-title">
-      <a href="/">Dy&#39;blog</a>
+      <a href="/">DY&#39;BLOG</a>
     </h1>
     <p class="site-description"></p>
   </div>
@@ -70,7 +70,7 @@
   <div class="article-top-meta">
     <span class="posted-on">
       <a href="/2017/10/11/FGFW/" rel="bookmark">
-        <time class="entry-date published" datetime="2017-10-10T17:11:50.000Z">
+        <time class="entry-date published" datetime="2017-10-11T14:57:51.000Z">
           2017-10-11
         </time>
       </a>
@@ -85,18 +85,18 @@
       
         <p>这两天各种科学上网服务相继突然挂掉，让我各种措手不及，大概因为之前上网上的太过顺畅了，我居然所有的服务都用了Gmail邮箱来注册，刚好最近报了一个课程，突然登不了邮件让我觉得上网这件事让我变得狼狈不堪。所以我觉得任何时候都应该有多种方案的组合优化，才能让我们在突发状况下不至于太狼狈，才有更好的适应性。</p>
 <p>不得不说我原来用的红杏服务真的很赞，支持ssr，有十几条线路可选，而且速度流畅，物美价廉，真实让我怀念啊，用它加路由器我上网几乎感觉任何阻碍的感觉。所以这次它突然沦陷才让我有点慌张，因为几乎没有留备选方案，如果不能Google的一时还难以替换。所以我在此先留存一些备选方案。</p>
-<h2 id="优雅的上网之-ss-ssr"><a href="#优雅的上网之-ss-ssr" class="headerlink" title="优雅的上网之-ss/ssr"></a>优雅的上网之-ss/ssr</h2><p>shadowsocket，是普遍用来加密上网的客户代理了。<br>ios 推荐shadowrocket，电脑端及安卓都直接用shadowsocket的客户端就好了。<br>如果支持ssr服务，尽量用ssr客户端，因为有和谐的技术强大会有流量特征识别限时ss代理时的流量，我们测试过同一个服务器用ssr后速度还是比较大的提升的，不过这个跟运营商也有关系，如果没有被限速的话，ss是应该比ssr更快，ssr需要开启混淆协议会增加额外的流量。</p>
-<h3 id="使用现有服务商"><a href="#使用现有服务商" class="headerlink" title="使用现有服务商"></a>使用现有服务商</h3><p>使用服务商的优势还是很明显的，不用花时间去维护，而且有多条线路可选，速度相对稳定。<br>现在还健在的服务有，<a href="https://ezcat.xyz/?/r=1136" target="_blank" rel="external">熊猫翻滚</a>(ps.这个是我的推荐链接)。里面教程很全，大家动动手都可以优雅的上网，提供ios的pac。不过我还是推荐下载shadowrocket，感觉更一劳永逸一点。<br>缺点是默认不支持ssr，需要提交工单开通，价格略高相比我之前用的服务。不过想在比较稳定的就剩他家了，可以买一个月10G，20元的服务也是够用了。</p>
-<h3 id="自己动手丰衣足食"><a href="#自己动手丰衣足食" class="headerlink" title="自己动手丰衣足食"></a>自己动手丰衣足食</h3><p>去国外的vps服务商买一个vps自己部署ss服务。</p>
-<h4 id="搬瓦工（Bandwagonhost）"><a href="#搬瓦工（Bandwagonhost）" class="headerlink" title="搬瓦工（Bandwagonhost）"></a>搬瓦工（Bandwagonhost）</h4><p>他家有自动安装的ss可选，所以比较方便。<a href="http://www.jianshu.com/p/502395de3515" target="_blank" rel="external">现成的教程</a></p>
-<h4 id="VULTR-vultr-com"><a href="#VULTR-vultr-com" class="headerlink" title="VULTR(vultr.com)"></a>VULTR(vultr.com)</h4><p>他家的vps也是比较便宜的，我最后用的是这个因为看上去比搬瓦工的颜值高。因我想搭ssr，所以没有自动安装ss服务也无所谓。</p>
-<h4 id="ssr一键部署脚本"><a href="#ssr一键部署脚本" class="headerlink" title="ssr一键部署脚本"></a>ssr一键部署脚本</h4><p>其实部署也很方便几乎十分钟搞定。<br>选CentOS 7 x64 系统，location随便选吧（因为很有可能选得IP会被封掉，得删了重换ip，这就是自己部署的最大弊端得自己折腾维护这些）<br>在console，或者用putty登录终端，运行这个一键脚本，十分钟后简单配置一下就可以用了。而且简易的用户管理后台，非常方便，推荐这个方案。</p>
-<pre><code>wget -N --no-check-certificate https://raw.githubusercontent.com/FunctionClub/SSR-Bash-Python/master/install.sh &amp;&amp; bash install.sh
-</code></pre><p><a href="http://www.jianshu.com/p/1794dc617185" target="_blank" rel="external">现成的教程</a> 项目地址：<a href="https://github.com/FunctionClub/SSR-Bash-Python" target="_blank" rel="external">Github</a></p>
-<h4 id="DigitalOcean"><a href="#DigitalOcean" class="headerlink" title="DigitalOcean"></a>DigitalOcean</h4><p>因为之前在DO买了vps用来做bolg的服务器，本来是想把ss服务继续搭建在这里，结果因为登录还要验证邮箱，TAT没法用就放弃了，我成功上网之后就把这里的服务删掉了。<br>所以DO其实有个漏洞，因为邀请注册绑定信用卡后会赠送5美元，所以可以先开一个服务用，因为是后扣费所以每次把depolet删了重新见一个就可以免费循环使用了。但是每个月得折腾一下。</p>
-<h2 id="优雅的上网之-VPN"><a href="#优雅的上网之-VPN" class="headerlink" title="优雅的上网之-VPN"></a>优雅的上网之-VPN</h2><h3 id="现成的服务商"><a href="#现成的服务商" class="headerlink" title="现成的服务商"></a>现成的服务商</h3><p>留存一下，以备不时之需。都是国外的vpn提供商，比起随时会挂掉的ss服务，这个应该稳定很多，缺点是价格贵。<br><a href="https://top10vpn.bid/" target="_blank" rel="external">介绍的网站</a><br>ExpressVPN<br>Nordvpn<br>vyprvpn</p>
-<h3 id="自己动手"><a href="#自己动手" class="headerlink" title="自己动手"></a>自己动手</h3><p>跟上面一样用vps+openvpn的方案，而且我看了一下这些云服务商基本都提供了现成的安装方案。应该也比较好折腾。</p>
-<h2 id="优雅的上网之-路由器"><a href="#优雅的上网之-路由器" class="headerlink" title="优雅的上网之-路由器"></a>优雅的上网之-路由器</h2><p>最后想要真正优雅的上网，一定要实现路由器的配置。之后你在wifi下基本上可以畅行无阻了。<br>推荐梅林固件+shadowsock或者shadowvpn，前者已经在梅林的市场里下架了，但是去搜一下的话还是可以找到可以离线安装的方案的，可惜的是不再维护升级了。</p>
+<h2 id="优雅的上网之-ss-ssr"><a href="#优雅的上网之-ss-ssr" class="headerlink" title="优雅的上网之-ss/ssr"></a><a href="#优雅的上网之-ss-ssr" title="优雅的上网之-ss/ssr"></a>优雅的上网之-ss/ssr</h2><p>shadowsocket，是普遍用来加密上网的客户代理了。<br>ios 推荐shadowrocket，电脑端及安卓都直接用shadowsocket的客户端就好了。<br>如果支持ssr服务，尽量用ssr客户端，因为有和谐的技术强大会有流量特征识别限时ss代理时的流量，我们测试过同一个服务器用ssr后速度还是比较大的提升的，不过这个跟运营商也有关系，如果没有被限速的话，ss是应该比ssr更快，ssr需要开启混淆协议会增加额外的流量。</p>
+<h3 id="使用现有服务商"><a href="#使用现有服务商" class="headerlink" title="使用现有服务商"></a><a href="#使用现有服务商" title="使用现有服务商"></a>使用现有服务商</h3><p>使用服务商的优势还是很明显的，不用花时间去维护，而且有多条线路可选，速度相对稳定。<br>现在还健在的服务有，<a href="https://ezcat.xyz/?/r=1136" target="_blank" rel="noopener">熊猫翻滚</a>(ps.这个是我的推荐链接)。里面教程很全，大家动动手都可以优雅的上网，提供ios的pac。不过我还是推荐下载shadowrocket，感觉更一劳永逸一点。<br>缺点是默认不支持ssr，需要提交工单开通，价格略高相比我之前用的服务。不过想在比较稳定的就剩他家了，可以买一个月10G，20元的服务也是够用了。</p>
+<h3 id="自己动手丰衣足食"><a href="#自己动手丰衣足食" class="headerlink" title="自己动手丰衣足食"></a><a href="#自己动手丰衣足食" title="自己动手丰衣足食"></a>自己动手丰衣足食</h3><p>去国外的vps服务商买一个vps自己部署ss服务。</p>
+<h4 id="搬瓦工（Bandwagonhost）"><a href="#搬瓦工（Bandwagonhost）" class="headerlink" title="搬瓦工（Bandwagonhost）"></a><a href="#搬瓦工（Bandwagonhost）" title="搬瓦工（Bandwagonhost）"></a>搬瓦工（Bandwagonhost）</h4><p>他家有自动安装的ss可选，所以比较方便。<a href="http://www.jianshu.com/p/502395de3515" target="_blank" rel="noopener">现成的教程</a></p>
+<h4 id="VULTR-vultr-com"><a href="#VULTR-vultr-com" class="headerlink" title="VULTR(vultr.com)"></a><a href="#VULTR-vultr-com" title="VULTR(vultr.com)"></a>VULTR(vultr.com)</h4><p>他家的vps也是比较便宜的，我最后用的是这个因为看上去比搬瓦工的颜值高。因我想搭ssr，所以没有自动安装ss服务也无所谓。</p>
+<h4 id="ssr一键部署脚本"><a href="#ssr一键部署脚本" class="headerlink" title="ssr一键部署脚本"></a><a href="#ssr一键部署脚本" title="ssr一键部署脚本"></a>ssr一键部署脚本</h4><p>其实部署也很方便几乎十分钟搞定。<br>选CentOS 7 x64 系统，location随便选吧（因为很有可能选得IP会被封掉，得删了重换ip，这就是自己部署的最大弊端得自己折腾维护这些）<br>在console，或者用putty登录终端，运行这个一键脚本，十分钟后简单配置一下就可以用了。而且简易的用户管理后台，非常方便，推荐这个方案。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget -N --no-check-certificate https://raw.githubusercontent.com/FunctionClub/SSR-Bash-Python/master/install.sh &amp;&amp; bash install.sh</span><br></pre></td></tr></table></figure>
+<p><a href="http://www.jianshu.com/p/1794dc617185" target="_blank" rel="noopener">现成的教程</a> 项目地址：<a href="https://github.com/FunctionClub/SSR-Bash-Python" target="_blank" rel="noopener">Github</a></p>
+<h4 id="DigitalOcean"><a href="#DigitalOcean" class="headerlink" title="DigitalOcean"></a><a href="#DigitalOcean" title="DigitalOcean"></a>DigitalOcean</h4><p>因为之前在DO买了vps用来做bolg的服务器，本来是想把ss服务继续搭建在这里，结果因为登录还要验证邮箱，TAT没法用就放弃了，我成功上网之后就把这里的服务删掉了。<br>所以DO其实有个漏洞，因为邀请注册绑定信用卡后会赠送5美元，所以可以先开一个服务用，因为是后扣费所以每次把depolet删了重新见一个就可以免费循环使用了。但是每个月得折腾一下。</p>
+<h2 id="优雅的上网之-VPN"><a href="#优雅的上网之-VPN" class="headerlink" title="优雅的上网之-VPN"></a><a href="#优雅的上网之-VPN" title="优雅的上网之-VPN"></a>优雅的上网之-VPN</h2><h3 id="现成的服务商"><a href="#现成的服务商" class="headerlink" title="现成的服务商"></a><a href="#现成的服务商" title="现成的服务商"></a>现成的服务商</h3><p>留存一下，以备不时之需。都是国外的vpn提供商，比起随时会挂掉的ss服务，这个应该稳定很多，缺点是价格贵。<br><a href="https://top10vpn.bid/" target="_blank" rel="noopener">介绍的网站</a><br>ExpressVPN<br>Nordvpn<br>vyprvpn</p>
+<h3 id="自己动手"><a href="#自己动手" class="headerlink" title="自己动手"></a><a href="#自己动手" title="自己动手"></a>自己动手</h3><p>跟上面一样用vps+openvpn的方案，而且我看了一下这些云服务商基本都提供了现成的安装方案。应该也比较好折腾。</p>
+<h2 id="优雅的上网之-路由器"><a href="#优雅的上网之-路由器" class="headerlink" title="优雅的上网之-路由器"></a><a href="#优雅的上网之-路由器" title="优雅的上网之-路由器"></a>优雅的上网之-路由器</h2><p>最后想要真正优雅的上网，一定要实现路由器的配置。之后你在wifi下基本上可以畅行无阻了。<br>推荐梅林固件+shadowsock或者shadowvpn，前者已经在梅林的市场里下架了，但是去搜一下的话还是可以找到可以离线安装的方案的，可惜的是不再维护升级了。</p>
 <p>等后续有时间也得把各个客户端在网盘里备份一下。先这样，折腾了一晚上终于可以登邮箱了，我以后要老实的用QQ邮箱。</p>
 
       
@@ -126,7 +126,7 @@
     Theme by <a href="https://github.com/CodeDaraW/Hacker" target="_blank">Hacker</a>
     </br>
     
-    &copy; 2017 Dy
+    &copy; 2018 DY
     
   </p>
 </footer>
